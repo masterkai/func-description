@@ -1,0 +1,24 @@
+.iconIntroBox {
+  @include breakpoint($ipad){
+    flex-direction: column;
+  }
+  margin-bottom: calc(24px * 3);
+  padding: 0 40px;
+  display: flex;
+  justify-content: flex-start;
+  .group {
+    margin-right: calc(24px * 3);
+    display: flex;
+    padding-bottom: 24px;
+    align-items: center;
+    img {
+      width:100px;
+      margin-right: 24px;
+    }
+    .contentBox {
+      .engDesc {
+        font-weight: 700;
+      }
+    }
+  }
+}

@@ -1,0 +1,64 @@
+.procedureBox {
+  @include breakpoint($ipad){
+    flex-direction: column;
+  }
+  width: 100%;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .line {
+    @include breakpoint($ipad){
+      border-right: 4px dotted #828282;
+      width: 4px;
+      height: 30px;
+      border-bottom: none;
+    }
+    height: 2px;
+    width: 100%;
+    border-bottom: 4px dotted #828282;
+  }
+  .group {
+    @include breakpoint($ipad){
+      display: flex;
+      align-items: center;
+    }
+    &:nth-child(3){
+      .name {
+        color: #a4a4a4;}
+      .time {
+        color: #a4a4a4;}
+    }
+    &:nth-child(7){
+      .name {
+        color: #a4a4a4;}
+      .time {
+        color: #a4a4a4;}
+    }
+    .name {
+      @include breakpoint($ipad){
+        padding: 0;
+      }
+      padding: 6px 0 24px;
+      white-space: nowrap;
+      margin: 0 auto;
+      font-size: 1.2rem;
+      line-height: 1.2;
+      border-bottom: 2px dotted #828282;
+    }
+    .time {
+      @include breakpoint($ipad){
+        padding: 0;
+      }
+      padding-top: 24px;
+      font-size: 1.6rem;
+    }
+    img {
+      margin: 0;
+      width: 100px;
+    }
+    flex: 1 1 18%;
+    text-align: center;
+    padding: 24px;
+  }
+}

@@ -1,0 +1,46 @@
+.tableBox {
+  @include breakpoint($ipad){
+    flex-direction: column;
+  }
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  .columnBox {
+    @include breakpoint($ipad){
+      display: flex;
+      border-right: 1px solid $title;
+      border-bottom: unset;
+    }
+    &:last-child {
+      @include breakpoint($ipad){
+        border-bottom: 1px solid $title;
+      }
+      border-right: 1px solid $title;
+    }
+    border-top: 1px solid $title;
+    border-left: 1px solid $title;
+    border-bottom: 1px solid $title;
+    flex: 1 1 auto;
+    .thead {
+      @include breakpoint($ipad){
+        flex: 0 1 30%;
+
+      }
+      background-color: lighten(#78c0c0, 30%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 5px 20px;
+    }
+    .tbody {
+      @include breakpoint($ipad){
+        flex: 0 1 70%;
+      }
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 5px 20px;
+    }
+  }
+}

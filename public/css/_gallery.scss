@@ -1,0 +1,122 @@
+.galleryBox {
+  .swiper-container {
+    @include breakpoint($ipad) {
+
+    }
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    .swiper-slide {
+      background-size: cover;
+      background-position: center;
+    }
+  }
+  @include breakpoint($ipad) {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+  flex: 0 1 50%;
+  max-width: 550px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+.gallery-top {
+  flex: 0 1 80%;
+  height: 550px;
+  width: 100%;
+}
+
+.gallery-thumbs {
+  flex: 0 1 20%;
+  width: 100%;
+  height: 100px;
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+
+.gallery-thumbs .swiper-slide {
+  width: 25%;
+  height: 100%;
+  opacity: 0.4;
+}
+
+.gallery-thumbs .swiper-slide-thumb-active {
+  opacity: 1;
+}
+.container {
+  @include breakpoint($ipad){
+    padding: 20px;
+  }
+  max-width: 1440px;
+  margin: 0 auto;
+
+  .row {
+    @include breakpoint($ipad) {
+      flex-wrap: wrap;
+      flex-direction: column;
+
+    }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+
+.galleryContentBox {
+  @include breakpoint($ipad) {
+    width: 100%;
+    flex: 1 1 100%;
+  }
+  flex: 0 1 50%;
+  .name {
+    @include breakpoint($ipad){
+      font-size: 1.5rem;
+    }
+    span {
+      margin-left: 24px;
+    }
+    font-size: 1.875rem;
+  }
+  .intro {
+    @include breakpoint($ipad){
+      font-size: 1.2rem;
+    }
+    font-size: 1.875rem;
+    margin-bottom: 12px;
+  }
+  .tabGroup {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    display: flex;
+    justify-content: flex-start;
+    .tab {
+      &.active {
+        &:after {
+          position: absolute;
+          font-family: 'Font Awesome 5 Free';
+          content: '\f14a';
+          font-size: 14px;
+        }
+        position: relative;
+      }
+      margin-right: 12px;
+      cursor: pointer;
+      height: 60px;
+      width: 60px;
+      background-position: center;
+      background-size: cover;
+    }
+  }
+}
+
+
+
+
+
+
+
+
