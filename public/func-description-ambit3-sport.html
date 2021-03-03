@@ -1,24 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" style='font-family: "Microsoft YaHei"，"Noto Sans TC"， sans-serif;'>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width， initial-scale=1"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <title>Ambit 3 Sport 功能說明</title>
 
     <!--=========================== CSS ===========================-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
-          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    <link rel="stylesheet" href="build/css/vendor.min.css">
-    <link rel="stylesheet" href="build/css/venobox.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="build/css/styles.css">
-
-    <!--=========================== JS ===========================-->
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script src="build/js/lazysizes.min.js" async=""></script>
-    <script type="text/javascript" src="build/js/wow.min.js"></script>
-    <script type="text/javascript">new WOW().init();</script>
 
 </head>
 
@@ -27,19 +15,21 @@
 <div class="container">
     <div class="row">
         <div class="galleryBox">
-            <!-- Swiper -->
-            <div class="swiper-container gallery-top">
-                <div class="swiper-wrapper">
+            <div class="carousel">
+                <div class="image-container">
 
                 </div>
-                <!-- Add Arrows -->
-                <div class="swiper-button-next swiper-button-white"></div>
-                <div class="swiper-button-prev swiper-button-white"></div>
+                <div class="buttons-container">
+                    <button id="left" class="btn"><img src="build/images/icons/angle-left-light.svg"></button>
+                    <button id="right" class="btn"><img src="build/images/icons/angle-right-light.svg"></button>
+                </div>
             </div>
-            <div class="swiper-container gallery-thumbs">
-                <div class="swiper-wrapper">
+            <div class="carousel__thumbs">
+                <div class="image-container" id="thumbsContainer">
 
                 </div>
+                <button id="prev" class="btn btn-prev"><img src="build/images/icons/angle-left-light.svg"></button>
+                <button id="next" class="btn btn-next"><img src="build/images/icons/angle-right-light.svg"></button>
             </div>
         </div>
         <div class="galleryContentBox">
@@ -915,18 +905,9 @@
     </div>
 </div>
 
-
-<script type="application/javascript"
-        src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/gsap.min.js"></script>
-<script src="build/js/scroll/ScrollMagic.min.js"></script>
-<script src="build/js/scroll/animation.gsap.min.js"></script>
-<script src="build/js/scroll/debug.addIndicators.min.js"></script>
-<script type="application/javascript" src="build/js/templates.js"></script>
 <script type="application/javascript" src="http://localhost:35729/livereload.js"></script>
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<script src="build/js/venobox.min.js"></script>
+<script src="build/js/scripts.min.js"></script>
+
 <script>
   const data = [
     {
@@ -1025,24 +1006,12 @@
   ]
   const colorName = document.querySelector('.galleryContentBox .name .color')
   const tabBtns = document.querySelectorAll('.tabGroup .tab')
-  tabBtns.forEach((item, index) => {
-    item.addEventListener('click', () => {
-      tabBtns.forEach(item => item.classList.remove('active'))
-      item.classList.add('active')
-      renderGallery(data[index].images)
-      colorName.textContent = data[index].name
-    })
-  })
+
 
   function renderGallery(arr) {
-    if ($('.gallery-top:has(span)')) {
-      $('.swiper-notification').remove()
-    }
-    if ($('.gallery-thumbs:has(span)')) {
-      $('.swiper-notification').remove()
-    }
-    const galleryTopBox = document.querySelector('.gallery-top .swiper-wrapper')
-    const galleryThumbsBox = document.querySelector('.gallery-thumbs .swiper-wrapper')
+
+    const galleryTopBox = document.querySelector('.carousel .image-container')
+    const galleryThumbsBox = document.querySelector('.carousel__thumbs .image-container')
 
     while (galleryTopBox.firstChild) {
       galleryTopBox.removeChild(galleryTopBox.firstChild);
@@ -1050,37 +1019,52 @@
     while (galleryThumbsBox.firstChild) {
       galleryThumbsBox.removeChild(galleryThumbsBox.firstChild);
     }
-    // if(oldChild.length>0){
-    //   galleryTopBox.innerHTML=''
-    //   galleryThumbsBox.innerHTML=''
-    // }
-    const gallery = arr.map(item => `<div class="swiper-slide"
-                         style="background-image:url(${item.url})"></div>`).join('')
 
+    const gallery = arr.map(item => `<img src="${item.url}" alt="">`).join('')
 
     galleryTopBox.insertAdjacentHTML('afterbegin', gallery)
     galleryThumbsBox.insertAdjacentHTML('afterbegin', gallery)
-
-    const galleryThumbs = new Swiper('.gallery-thumbs', {
-      spaceBetween: 10,
-      slidesPerView: 6,
-      freeMode: true,
-      watchSlidesVisibility: true,
-      watchSlidesProgress: true,
-    });
-    const galleryTop = new Swiper('.gallery-top', {
-      spaceBetween: 10,
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      thumbs: {
-        swiper: galleryThumbs
-      }
-    });
   }
 
   renderGallery(data[0].images)
+
+  const carousel = document.querySelector('.carousel')
+  const imgContainer = document.querySelector('.carousel .image-container')
+  const leftBtn = document.getElementById('left')
+  const rightBtn = document.getElementById('right')
+  const images = document.querySelectorAll('.carousel .image-container img')
+  const thumbs = document.querySelectorAll('.carousel__thumbs .image-container img')
+  // Carousel
+  const topCarousel = new Carousel(carousel, imgContainer, leftBtn, rightBtn, images, thumbs, 5000)
+
+  // thumbs
+  const thumbsContainer = document.getElementById('thumbsContainer')
+  const prevBtn = document.querySelector('.btn-prev')
+  const nextBtn = document.querySelector('.btn-next')
+
+  const buttonNav = new Thumbs(carousel, thumbsContainer, prevBtn, nextBtn, thumbs)
+
+  tabBtns.forEach((item, i) => {
+    item.addEventListener('click', () => {
+      tabBtns.forEach(item => item.classList.remove('active'))
+      item.classList.add('active')
+      renderGallery(data[i].images)
+      const images = document.querySelectorAll('.carousel .image-container img')
+      const thumbs = document.querySelectorAll('.carousel__thumbs .image-container img')
+      // Carousel
+      topCarousel.images = images
+      topCarousel.thumbs = thumbs
+      topCarousel.resetSize()
+      topCarousel.windowResize()
+      topCarousel.controller()
+      topCarousel.index = 0
+      topCarousel.changeImage()
+      // thumbs
+      buttonNav.thumbs = thumbs
+      buttonNav.resetSize()
+      colorName.textContent = data[i].name
+    })
+  })
 </script>
 
 </body>

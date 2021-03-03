@@ -95,13 +95,8 @@
     justify-content: flex-start;
     .tab {
       &.active {
-        &:after {
-          position: absolute;
-          font-family: 'Font Awesome 5 Free';
-          content: '\f14a';
-          font-size: 14px;
-        }
         position: relative;
+        border-bottom: 2px solid #11278A;
       }
       margin-right: 12px;
       cursor: pointer;

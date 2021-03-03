@@ -155,10 +155,10 @@
       if (thumbs.length <= 5) {
         thumbIndex = 0
       } else {
-        if (thumbIndex > (thumbs.length / 5) - 1) {
+        if (thumbIndex > (thumbs.length / (thumbs.length/2)) - 1) {
           thumbIndex = 0
         } else if (thumbIndex < 0) {
-          thumbIndex = (thumbs.length / 5) - 1
+          thumbIndex = (thumbs.length / (thumbs.length/2)) - 1
         }
       }
       thumbsContainer.style.transform = `translateX(${-thumbIndex * thumbSize}px)`

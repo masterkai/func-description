@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <title>Image Carousel</title>
+    <link rel="stylesheet" href="build/css/styles.css">
+</head>
+<body>
+<div class="carousel">
+    <div class="image-container" id="imgs">
+        <img src="build/images/suunto3/suunto-3-all-black-front-view-800x800px-01.jpg" alt="first-image">
+        <img src="build/images/suunto3/suunto-3-all-black-perspective-view-800x800px-01.jpg" alt="second-image">
+        <img src="build/images/suunto3/suunto-app-post-workout-applemap-800x800px-01.jpg" alt="third-image">
+        <img src="build/images/suunto3/suunto-3-all-black-perspective-view-partners-800x800px-01.jpg"
+             alt="fourth-image">
+        <img src="build/images/suunto3/suunto-3-all-black-rear-view-800x800px-01.jpg" alt="fifth-image">
+        <img src="./build/images/suunto3/suunto-3-all-black-expressive-view-800x800px-01.jpg" alt="">
+        <img src="./build/images/suunto3/suunto-3-all-black-perspective-view-800x800px-03.jpg" alt="">
+        <img src="./build/images/suunto3/suunto-3-all-black-on-wrist-800x800px-01.jpg" alt="">
+        <img src="./build/images/suunto3/suunto-3-all-black-on-wrist-800x800px-02.jpg" alt="">
+        <img src="./build/images/suunto3/suunto-3-all-black-on-wrist-800x800px-03.jpg" alt="">
+    </div>
+    <div class="buttons-container">
+        <button id="left" class="btn"><img src="build/images/icons/angle-left-light.svg"></button>
+        <button id="right" class="btn"><img src="build/images/icons/angle-right-light.svg"></button>
+    </div>
+</div>
+<div class="carousel__thumbs">
+    <div class="image-container" id="thumbsContainer">
+        <img src="build/images/suunto3/suunto-3-all-black-front-view-800x800px-01.jpg" alt="first-image">
+        <img src="build/images/suunto3/suunto-3-all-black-perspective-view-800x800px-01.jpg" alt="second-image">
+        <img src="build/images/suunto3/suunto-app-post-workout-applemap-800x800px-01.jpg" alt="third-image">
+        <img src="build/images/suunto3/suunto-3-all-black-perspective-view-partners-800x800px-01.jpg"
+             alt="fourth-image">
+        <img src="build/images/suunto3/suunto-3-all-black-rear-view-800x800px-01.jpg" alt="fifth-image">
+        <img src="./build/images/suunto3/suunto-3-all-black-expressive-view-800x800px-01.jpg" alt="">
+        <img src="./build/images/suunto3/suunto-3-all-black-perspective-view-800x800px-03.jpg" alt="">
+        <img src="./build/images/suunto3/suunto-3-all-black-on-wrist-800x800px-01.jpg" alt="">
+        <img src="./build/images/suunto3/suunto-3-all-black-on-wrist-800x800px-02.jpg" alt="">
+        <img src="./build/images/suunto3/suunto-3-all-black-on-wrist-800x800px-03.jpg" alt="">
+    </div>
+    <button id="prev" class="btn btn-prev"><img src="build/images/icons/angle-left-light.svg"></button>
+    <button id="next" class="btn btn-next"><img src="build/images/icons/angle-right-light.svg"></button>
+</div>
+<script
+        src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+        crossorigin="anonymous"></script>
+
+<script src="build/js/scripts.min.js"></script>
+<script>
+  const carousel = document.querySelector('.carousel')
+  const imgContainer = document.querySelector('.carousel .image-container')
+  const leftBtn = document.getElementById('left')
+  const rightBtn = document.getElementById('right')
+  const images = document.querySelectorAll('.carousel .image-container img')
+  const thumbs = document.querySelectorAll('.carousel__thumbs .image-container img')
+  // Carousel
+  const topCarousel = new Carousel(carousel,imgContainer,leftBtn,rightBtn,images,thumbs,5000)
+
+  // thumbs
+  const thumbsContainer = document.getElementById('thumbsContainer')
+  const prevBtn = document.querySelector('.btn-prev')
+  const nextBtn = document.querySelector('.btn-next')
+
+  const buttonNav = new Thumbs(carousel,thumbsContainer, prevBtn, nextBtn, thumbs)
+
+
+</script>
+</body>
+</html>
