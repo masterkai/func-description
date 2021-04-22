@@ -1,0 +1,39 @@
+.groundWithImage {
+  &--centerTop {
+    background-position: center top;
+  }
+  @include breakpoint($iphone){
+    padding: 25px;
+  }
+  background-size: cover;
+  background-position: center;
+  padding: 40px;
+  ul {
+    li {
+      list-style: circle;
+      color: #fff;
+      line-height: 2;
+    }
+  }
+  .big-title {
+    @include breakpoint($ipad){
+      font-size: 2.8rem;
+    }
+    @include breakpoint($iphone){
+      font-size: 1.8rem;
+    }
+    font-size: 4rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.3;
+    text-shadow: 0 0 3px rgba(0,0,0,.5);
+    &--thin {
+      font-weight: 100;
+    }
+  }
+  
+  p {
+    margin-top: 24px;
+    color: #fff;
+  }
+}

@@ -1,4 +1,8 @@
 .flexContainer {
+  @include breakpoint($ipad){
+    margin-top: 24px;
+    order: 2;
+  }
   display: flex;
   max-width: 1440px;
   margin: 0 auto;

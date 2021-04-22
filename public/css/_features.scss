@@ -1,0 +1,49 @@
+.features {
+  .watchContainer {
+    img {
+      @include breakpoint($iphone){
+        width: 85%;
+      }
+      max-width: 400px;
+    }
+    .slogan {
+      @include breakpoint($iphone){
+        letter-spacing: unset;
+      }
+      margin-top: 24px;
+      color: #fff;
+      font-size: 3rem;
+      letter-spacing: 1rem;
+    }
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .iconsBox {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    .group {
+      @include breakpoint($iphone){
+        flex: 1 1 calc(100% / 4);
+      }
+      flex: 1 1 calc(100% / 8);
+      img {
+        max-width: 120px;
+        width: 100%;
+      }
+      .desc{
+        @include breakpoint($iphone){
+          font-size: .85rem;
+          text-align: center;
+
+        }
+        color: #fff;
+      }
+    }
+  }
+  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(51,51,51,1) 100%);
+  padding: 48px 24px;
+}

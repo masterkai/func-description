@@ -1,5 +1,5 @@
 class Carousel {
-  constructor(carousel, imgContainer, leftBtn, rightBtn, images, thumbs, timeout = 2000) {
+  constructor(carousel, imgContainer, leftBtn, rightBtn, images, thumbs, circles, timeout = 2000) {
     this.carousel = carousel
     this.imgContainer = imgContainer
     this.leftBtn = leftBtn
@@ -10,10 +10,34 @@ class Carousel {
     this.sliderSize = this.carousel.clientWidth
     this.index = 0
     this.resizeTimer = null
-    this.interval = setInterval(() => this.run(), this.timeout)
+    this.circles = circles
+    // this.pagination = document.querySelectorAll('.pagination .circle')
+    this.interval = setInterval(() => {
+      this.run()
+      // console.log(this.currentIndex());
+    }, this.timeout)
     this.resetSize()
     this.windowResize()
     this.controller()
+    this.thumb()
+    // this.createCircle()
+    // this.addActiveCircle()
+    this.initialActiveCircle()
+  }
+  currentIndex() {
+    // console.log(this.index);
+    return this.index
+  }
+
+  thumb() {
+    const that = this
+    this.thumbs.forEach((item, i) => {
+      item.addEventListener('click', () => {
+        that.index = i
+        this.changeImage()
+        this.resetInterval()
+      })
+    })
   }
 
   controller() {
@@ -22,19 +46,27 @@ class Carousel {
       that.index++
       this.changeImage()
       this.resetInterval()
+      this.addActiveCircle(this.index)
     })
     this.leftBtn.addEventListener('click', () => {
       that.index--
       this.changeImage()
       this.resetInterval()
+      this.addActiveCircle(this.index)
     })
-    this.thumbs.forEach((item, i) => {
-      item.addEventListener('click', () => {
-        that.index = i
-        this.changeImage()
-        this.resetInterval()
-      })
-    })
+
+  }
+
+  initialActiveCircle(){
+    if(this.circles){
+      this.circles[0].classList.add('active')
+    }
+  }
+
+  addActiveCircle(index) {
+
+    this.circles.forEach(item => item.classList.remove('active'))
+    this.circles[index].classList.add('active')
   }
 
   windowResize() {
@@ -61,10 +93,11 @@ class Carousel {
   run() {
     this.index++
     this.changeImage()
+    this.addActiveCircle(this.index)
   }
 
   resetInterval() {
-    console.log('interval has been reset!!');
+    // console.log('interval has been reset!!');
     clearInterval(this.interval)
     this.interval = setInterval(() => this.run(), this.timeout)
   }
@@ -136,4 +169,10 @@ class Thumbs {
     })
   }
 
+}
+
+class Circle {
+  constructor() {
+
+  }
 }

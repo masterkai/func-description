@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>TRAVERSE 功能說明</title>
+
+    <!--=========================== CSS ===========================-->
+    <link rel="stylesheet" href="build/css/styles.css">
+
+</head>
+
+
+<body>
+<div class="container">
+    <div class="row">
+        <div class="galleryBox">
+            <div class="carousel">
+                <div class="image-container"></div>
+                <div class="buttons-container">
+                    <button id="left" class="btn"></button>
+                    <button id="right" class="btn"></button>
+                </div>
+
+            </div>
+            <div class="pagination"></div>
+            <div class="carousel__thumbs">
+                <div class="image-container" id="thumbsContainer"></div>
+                <button id="prev" class="btn btn-prev"></button>
+                <button id="next" class="btn btn-next"></button>
+            </div>
+
+        </div>
+        <div class="galleryContentBox">
+            <div class="name ">TRAVERSE<span class="color">經典黑</span></div>
+            <div class="intro">健行、徒步、登山越野及運動鍛鍊的 GPS 腕錶</div>
+            <p>去探險吧！當您離開了熟悉的道路，您開始探索的不僅是荒野，更是內心深處的自己。放開您的猶豫與遲疑，讓不確定轉化為自信、懷疑轉化為成功的喜悅，走入大自然的懷抱中， 將探險轉化為恆久的回憶。在野外山林間，徒步旅行的時候，Suunto Traverse 是您理想的旅伴。在【Movescount 運動平台】上利用等高線地圖規劃您的路徑，沿途使用 GPS 衛星導航指引方向。Suunto Traverse 強悍的電池續航力，讓您無後顧之憂的進行探險活動。</p>
+            <div class="tabGroup">
+                <div class="tab active"
+                     style="background-image: url(https://img.empyrean.tw/ABB6A9C2-C9AA-4892-9317-97EA854D97FB.jpg)"></div>
+                <div class="tab"
+                     style="background-image: url(https://img.empyrean.tw/709230B5-F408-4524-BBDD-AC17CA6214CC.jpg)"></div>
+                <div class="tab"
+                     style="background-image: url(https://img.empyrean.tw/1378FD74-498A-4D1A-B05F-E1EB332077C6.jpg)"></div>
+
+            </div>
+            <div class="flexContainer" style="margin-bottom: 24px;">
+                <div class="btn btn--outline" style="margin: 0">立即購買</div>
+            </div>
+        </div>
+    </div>
+    <div class="space"></div>
+    <div class="row">
+        <img class="img-responsive" src="https://img.empyrean.tw/41D4BD5E-856C-48FF-AB34-490289C527B4.jpg" alt="">
+    </div>
+    <div class="bannerBox">
+        <div class="bannerTitle">支援登山越野時的各項功能與數據</div>
+        <div class="mainPoint">
+            <div class="descBox">
+                <div class="item">GPS/GLONASS 雙衛星導航</div>
+                <div class="item">電子羅盤</div>
+                <div class="item">方向鎖定與方向指示</div>
+                <div class="item">航點與航線導航</div>
+                <div class="item">返航/航跡返航</div>
+                <div class="item">航跡紀錄查看與分享</div>
+                <div class="item">氣壓式高度計</div>
+            </div>
+            <div class="descBox">
+                <div class="item">GPS高度計</div>
+                <div class="item">整合GPS與大氣壓力數據高度計</div>
+                <div class="item">總上升/下降高度</div>
+                <div class="item">垂直升降速度顯示</div>
+                <div class="item">高度差</div>
+                <div class="item">氣象變化預測</div>
+                <div class="item">海拔高度圖</div>
+            </div>
+            <div class="descBox">
+                <div class="item">溫度</div>
+                <div class="item">自動記錄高度氣壓數據</div>
+                <div class="item">暴風雨雪警報</div>
+                <div class="item">APPS功能新增與建立</div>
+                <div class="item">手電筒</div>
+                <div class="item">日光節約時間</div>
+                <div class="item">日出/日落警示</div>
+            </div>
+        </div>
+    </div>
+    <div class="iconIntroBox">
+        <div class="group">
+            <img src="https://img.empyrean.tw/675AA39E-AC42-42CB-8863-316CD6523D97.png" alt="">
+            <div class="contentBox">
+                <div class="engDesc">Mountaineering</div>
+                <div class="name">登山</div>
+            </div>
+        </div>
+        <div class="group">
+            <img src="https://img.empyrean.tw/C04CBB6F-BB66-4F2C-84FB-725693831E36.png" alt="">
+
+            <div class="contentBox">
+                <div class="engDesc">Trekking</div>
+                <div class="name">徒步登山越野</div>
+            </div>
+        </div>
+        <div class="group">
+            <img src="https://img.empyrean.tw/CA828B16-D388-48C4-BC6F-F2264BEA0CE2.png" alt="">
+            <div class="contentBox">
+                <div class="engDesc">Hiking</div>
+                <div class="name">健行</div>
+            </div>
+        </div>
+    </div>
+    <div class="title--blueBG">路線導航</div>
+    <div class="generalBox">
+        <div class="textContent">
+            <div class="title">GPS/GLONASS 雙衛星導航系統，強大而精準</div>
+            <p>Suunto Traverse 腕錶能夠接收 GPS 與 GLONASS 衛星訊號、導航準確度高、路徑修正迅速。能迅速計算出您目前的速度與位置。</p>
+        </div>
+        <img class="halfSize" src="https://img.empyrean.tw/0377E151-E1B0-433C-B0FE-5E4B80D54A54.jpg" alt="">
+    </div>
+    <div class="generalBox generalBox--column">
+        <div class="textContent">
+            <div class="title">在【Movescount 運動平台】規劃路線</div>
+            <ul>
+                <li class="mb-3">【Movescount 運動平台】上，有超過 300 萬條公開路線。</li>
+                <li class="mb-3">在地圖上創建一條【路線】，讓您輕鬆自在地使用 Suunto 腕錶從事健行、騎乘自行車、跑步及登山越野等活動，足跡踏遍叢林野外，體驗冒險精神。
+                </li>
+                <li class="mb-3">在規劃路線時，隨時檢視、調整路線的高度分佈，並分享您的公開路線。</li>
+                <li>以 .kml 及 .gpx 格式匯入/匯出路線。</li>
+            </ul>
+        </div>
+        <img class="fourObj" src="https://img.empyrean.tw/6F17FA0B-0867-496B-90FE-D5EE4C92032C.png" alt="">
+    </div>
+    <div class="generalBox">
+        <div class="textContent">
+            <div class="title">豐富的地圖資訊，協助您規劃路線</div>
+            <ul>
+                <li class="mb-3">【Movescount 運動平台】上的 Mapbox、Google、德高等豐富的圖資，支援地形圖、等高線地圖、衛星圖、黑圖、及光圖，提供您豐富的地理資訊。
+                </li>
+                <li class="mb-3">即使未知地形中的越野小徑也不例外，都能協助路線的詳細規劃。
+                </li>
+                <li>可預先確認地表和地形的詳細信息，方便選擇搭建帳篷的最佳區域。
+                </li>
+            </ul>
+        </div>
+        <img class="twoObj" src="https://img.empyrean.tw/60C3F261-6EDC-4727-B207-8F9FB1685B51.png" alt="">
+    </div>
+    <div class="generalBox">
+        <div class="textContent">
+            <div class="title">【路線】導航</div>
+            <ul>
+                <li class="mb-3">在【Movescount 運動平台】上，建立一條路線，利用GPS導航系統，沿著腕錶的指示，帶領您至目的地。
+                </li>
+                <li>在【Movescount 運動平台】上，規劃路線，設定【興趣點】，【興趣點】可以是賽事補給點、出遊地標、登山紮營地點、水源地點等等。在【路線導航】過程中，隨時掌握【興趣點】的相對位置。
+                </li>
+            </ul>
+        </div>
+        <img class="halfSize" src="https://img.empyrean.tw/F08CC065-27F7-4F83-ABEE-42A258FDD4C7.png" alt="">
+    </div>
+
+    <div class="generalBox">
+        <div class="textContent">
+            <div class="title">【興趣點】導航</div>
+            <ul>
+                <li class="mb-3">您可以將【目前的位置】，或在【Movescount 運動平台】上，事先將重要的地點，設定成【興趣點】。
+                </li>
+                <li class="mb-3">當導航至興趣點，在您靜止不動時，三角形顯示你的興趣點方位。請將您的三角形置於兩條實線當中，即可確保到達您的目的地。
+                </li>
+                <li>接近【興趣點】時，腕錶會以警示音，提醒您正在接近中。</li>
+            </ul>
+        </div>
+        <img class="halfSize" src="https://img.empyrean.tw/A9E6CFC2-5FA2-4864-82DF-AC0D1ED45146.png" alt="">
+    </div>
+    <div class="generalBox">
+        <div class="textContent">
+            <div class="title">【麵包屑】導航</div>
+            <ul>
+                <li class="mb-3">軌跡紀錄有助於沿跡返航，而不需另外啟動回返至起點的導航。
+                </li>
+                <li class="mb-3">沿著預先下載的航線前進時，軌跡紀錄也會同步顯示，不僅易於檢視目前所在位置，也方便隨時調整計劃。
+                </li>
+
+            </ul>
+        </div>
+        <img class="halfSize" src="https://img.empyrean.tw/5D754C86-87BB-4624-98AF-B16FAC6BB3A5.jpg" alt="">
+    </div>
+    <div class="generalBox">
+        <div class="textContent">
+            <div class="title">【路線高度剖面圖】導航</div>
+            <ul>
+                <li class="mb-3">導航時，Traverse 會以【高度剖面圖】的方式呈現，您可以隨時掌握您目前位置的高度、上升、下降、坡度、及路線上剩餘的峰頂數等訊息。
+                </li>
+            </ul>
+        </div>
+        <img class="twoObj" src="https://img.empyrean.tw/07454CFD-7A72-4DAB-B773-2A721371F82C.jpg" alt="">
+    </div>
+    <div class="title--blueBG">其他戶外功能</div>
+    <div class="generalBox">
+        <div class="textContent">
+            <div class="title"> 開啟GPS長達100小時的電池效能</div>
+            <p>對於要求嚴苛的探險活動，Traverse 在「普通」的 GPS 定位精準度下，具備長達 100 小時的電池效能。您可以自行調整 GPS 精準度，或是透過行動電源，維持【活動記錄】的不間斷，及延長電池續航能力。</p>
+        </div>
+
+    </div>
+    <div class="generalBox">
+        <div class="textContent">
+            <div class="title">電子羅盤</div>
+            <p>航點方向鎖定搭配即時的方向指示，讓您在荒郊野外，甚至雲霧壟罩的山林，也能充滿自信無後顧之憂的確實掌握方向。</p>
+        </div>
+        <img class="halfSize" src="https://img.empyrean.tw/B2E163EF-0853-4CB5-8698-26D7E2B72C77.png" alt="">
+    </div>
+    <div class="generalBox">
+        <div class="textContent">
+            <div class="title">方向鎖定與方向指示</div>
+            <p>鎖定目標輕鬆一按，立即產生相對於北方的目標方向。</p>
+        </div>
+        <img class="twoObj" src="https://img.empyrean.tw/0ED7C68D-9A60-49E3-9D14-F77CF7006CAF.png" alt="">
+    </div>
+    <div class="generalBox">
+        <div class="textContent">
+            <div class="title">磁偏角</div>
+            <p>依戶外活動需要，校正磁北極和地理北極之間的磁差。
+            </p>
+
+        </div>
+        <img class="halfSize" src="https://img.empyrean.tw/F3D1D85F-040D-4853-89DE-DA7F5E0D55BF.png" alt="">
+    </div>
+    <div class="generalBox">
+        <div class="textContent">
+            <div class="title">全幅傾斜角補償</div>
+            <p>即使腕錶傾斜不在水平面上，任何角度，皆能精準指示方向。
+            </p>
+
+        </div>
+        <img src="https://img.empyrean.tw/5EAA14ED-1ECF-401F-AB6B-1D1C36EF8DE7.png" alt="">
+    </div>
+
+    <div class="generalBox">
+        <div class="textContent">
+            <div class="title">氣壓式高度計</div>
+
+            <ul>
+                <li>適用山林野外健走、登山越野丶登山自行車、飛行傘，等高度變化較大的戶外活動。
+                </li>
+                <li>FusedAIti&#8482; 整合 GPS 與大氣壓力數據，大幅降低臨時誤差和偏移誤差，得出更精確高度讀數。高度、垂直速度與總爬升高度則是利用專利的 FusedAIti&#8482; 綜合氣壓數據與衛星計算高度而得。
+                </li>
+                <li>Traverse 會自動將氣壓變化辨識切換為高度變化或天氣變化。
+                </li>
+            </ul>
+
+        </div>
+        <img src="https://img.empyrean.tw/3EBB6EA3-92BD-418F-AE39-C672DF65B13C.jpg" alt="" class="twoObj">
+    </div>
+    <div class="generalBox">
+        <div class="textContent">
+
+
+            <div class="title">FusedAlti&#8482;</div>
+
+            <p>整合 GPS 與大氣壓力數據，大幅降低臨時誤差和偏移誤差，得出更精確高度讀數。高度、垂直速度與總爬升高度則是利用專利的 FusedAlti&#8482; ，綜合氣壓數據與衛星計算高度而得。</p>
+
+        </div>
+
+    </div>
+    <div class="generalBox">
+        <div class="textContent">
+
+
+            <div class="title">自動切換(Automatic)氣壓與高度</div>
+
+            <p>自動將氣壓變化辨識切換為高度變化或天氣變化。</p>
+
+        </div>
+        <img class="twoObj" src="https://img.empyrean.tw/BAE88C96-F406-403F-A9EB-5014BDAA2800.jpg" alt="">
+    </div>
+    <div class="generalBox generalBox--column">
+        <div class="textContent">
+
+
+            <div class="title">日出日落時間顯示</div>
+
+            <p>確保在從事戶外活動時，精準掌握日出/日落的時間。</p>
+
+        </div>
+        <img class="img-responsive" src="https://img.empyrean.tw/1D18696B-1CB5-4E8C-89CB-DA774081B119.jpg" alt="">
+    </div>
+    <div class="generalBox generalBox--column">
+        <div class="textContent">
+
+
+
+            <div class="title">手電筒模式</div>
+
+            <p>只要長按右下角的按鍵，就可以在黑暗的帳篷中快速搜索項目或查看地圖。</p>
+
+        </div>
+        <img class="img-responsive" src="https://img.empyrean.tw/18A20F24-675F-41DE-B6B0-1CDA78248958.jpg" alt="">
+    </div>
+    <div class="title--blueBG">
+        天氣指示器
+    </div>
+    <div class="generalBox generalBox--column">
+
+        <div class="textContent">
+            <div class="title">天氣趨勢</div>
+            <p class="mb-3">由箭頭的兩條線顯示，每一條線代表 3 個小時的間隔時間。若在三小時內大氣壓力的變化超過2hPa / 0.59inHg，就會觸發箭頭方向的變更。
+            </p>
+
+
+        </div>
+        <div class="cardBox">
+            <div class="card card--x3">
+                <img src="https://img.empyrean.tw/C42481F5-7F09-4D8D-92BF-507A9459403E.jpg" alt="">
+                <div class="desc">過去的六個小時內大氣壓力大幅下降
+                </div>
+            </div>
+            <div class="card card--x3">
+                <img src="https://img.empyrean.tw/CCA074B3-D2DA-4E14-81D3-BF4F213AA232.jpg" alt="">
+                <div class="desc">大氣壓力保持穩定，但在過去的三個小時內大幅上升
+                </div>
+            </div>
+            <div class="card card--x3">
+                <img src="https://img.empyrean.tw/D6B0F038-5C73-4A81-83A9-568E9EED7D33.jpg" alt="">
+                <div class="desc">大氣壓力持續大幅上升，但在過去的三個小時內大幅下降
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="generalBox generalBox--column">
+        <div class="textContent">
+            <div class="title">暴風雨/雪警示</div>
+            <p class="mb-3">當氣壓驟降將發出提醒，因為這往往意味著天氣條件正在惡化，若在三個小時的間隔時間內壓力下降了 4hPa / 0.12inHg 或以上，會發出警報音且暴風符號會閃爍。
+            </p>
+
+
+        </div>
+        <img src="https://img.empyrean.tw/6134E386-7695-45A0-AE6E-2375CBDA6156.jpg" alt="">
+    </div>
+    <div class="row">
+        <img class="img-responsive" src="https://img.empyrean.tw/40DF9D45-ED60-4F90-A8E4-AD492BB2D408.jpg" alt="">
+    </div>
+    <div class="bannerBox">
+        <div class="bannerTitle">一只您想每日配戴的腕錶</div>
+        <p class="mb-3">雖然設計使用於戶外活動，Traverse 時尚的外型與全方位的功能，也適合您每天的城市探險之旅。</p>
+        <div class="mainPoint">
+            <div class="descBox">
+                <div class="item">時間、日期</div>
+                <div class="item">鬧鐘</div>
+                <div class="item">雙時區顯示</div>
+            </div>
+            <div class="descBox">
+                <div class="item">GPS同步時間</div>
+                <div class="item">倒數計時器</div>
+                <div class="item">碼表</div>
+            </div>
+            <div class="descBox">
+                <div class="item">計步器、卡路里</div>
+                <div class="item">震動警示</div>
+                <div class="item">日光節約時間</div>
+            </div>
+            <div class="descBox">
+                <div class="item">來電及訊息通知</div>
+                <div class="item">LINE及FB推播通知</div>
+            </div>
+        </div>
+    </div>
+    <div class="title--blueBG">日常追蹤</div>
+    <div class="generalBox">
+        <div class="textContent">
+            <div class="title">日光節約時間</div>
+            <p class="mb-3">Traverse 在 GPS 時間開啟時支援日光節約時間(DST)的時間調整。</p>
+        </div>
+    </div>
+    <div class="generalBox">
+        <div class="textContent">
+            <div class="title">活動監測/每日步數</div>
+            <p class="mb-3">測量您每天行走的步數，並根據您個人的資料，計算每日燃燒的熱量。步數每60秒會更新一次。</p>
+        </div>
+        <img class="twoObj" src="https://img.empyrean.tw/54CF5CAB-06C2-462E-B5FD-F6753C1B986A.jpg" alt="">
+    </div>
+    <div class="generalBox">
+        <div class="textContent">
+            <div class="title">倒數計時器</div>
+            <p class="mb-3">倒數計時器從預設時間倒數到 0。預設的倒數計時，時間為 5 分鐘。</p>
+        </div>
+        <img class="twoObj" src="https://img.empyrean.tw/036A80C7-BCD6-4294-959B-40630BDE94D9.jpg" alt="">
+    </div>
+    <div class="generalBox">
+        <div class="textContent">
+            <div class="title">碼錶</div>
+            <p class="mb-3">可以從開始功能表開啟或關閉碼錶的顯示。</p>
+        </div>
+        <img class="twoObj" src="https://img.empyrean.tw/1B565753-38DC-4916-8D61-E9ADC0AB4749.jpg" alt="">
+    </div>
+    <div class="generalBox">
+        <div class="textContent">
+            <div class="title">訊息推播通知</div>
+            <p class="mb-3">將您的腕錶和 Suunto Movescount 行動應用程式(APP)配對，利用腕錶接收來自手機完整的訊息通知，例如：來電、簡訊、LINE、FB…等推播通知。</p>
+        </div>
+        <img class="twoObj" src="https://img.empyrean.tw/7117EB3D-E75E-4C1A-A99F-78D1D3B6238D.jpg" alt="">
+    </div>
+    <div class="generalBox">
+        <div class="textContent">
+            <div class="title">振動警示</div>
+            <p class="mb-3">開啟靜音模式時，在吵雜的背景環境下，收到通知或警示時會以振動方式提醒查看。讓您不會遺漏任何警示或來自手機的訊息通知。</p>
+        </div>
+    </div>
+    <div class="row">
+        <img class="img-responsive" src="https://img.empyrean.tw/3CB9C932-6481-4DA1-BBE5-1D2BD5635CE1.png" alt="">
+    </div>
+    <div class="bannerBox">
+        <div class="bannerTitle">支援跑步時的各項數據</div>
+        <div class="mainPoint">
+            <div class="descBox">
+                <div class="item">跑步配速</div>
+                <div class="item">即時平均跑速</div>
+            </div>
+            <div class="descBox">
+                <div class="item">依公里/英里計算圈數比較</div>
+                <div class="item">APPS功能新增與建立</div>
+            </div>
+        </div>
+    </div>
+    <div class="iconIntroBox">
+        <div class="group">
+            <img src="https://img.empyrean.tw/EF572142-FC3F-4092-AF4B-57E2F01F6D10.png" alt="">
+            <div class="contentBox">
+                <div class="engDesc">Run</div>
+                <div class="name">跑步</div>
+            </div>
+        </div>
+        <div class="group">
+            <img src="https://img.empyrean.tw/E0FC00B4-2144-470C-96A8-A8F0D038DA5B.png" alt="">
+            <div class="contentBox">
+                <div class="engDesc">Trail Running</div>
+                <div class="name">越野跑</div>
+            </div>
+        </div>
+        <div class="group">
+            <img src="https://img.empyrean.tw/4B376A4E-AEFC-44C2-BD48-94FE8EA07D3F.png" alt="">
+            <div class="contentBox">
+                <div class="engDesc">Treadmill</div>
+                <div class="name">跑步機</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="title--blueBG">支援各品牌藍芽智能感測器</div>
+    <div class="generalBox">
+        <div class="textContent">
+            <div class="title">支援藍芽智能感測器</div>
+            <p class="mb-3">心率感測器<br>
+                記錄活動過程中提供您更多和您的體力勞動有關的詳細資訊。
+            </p>
+            <div class="d-flex">
+                <ul>
+                    <li>即時測得心率</li>
+                    <li>即時平均心率</li>
+                    <li>最高心率</li>
+                </ul>
+                <ul>
+                    <li>計算運動過程中燃燒的熱量</li>
+                    <li>於活動過程中燃燒的總熱量</li>
+                    <li>完整記錄水中運動數據</li>
+                </ul>
+            </div>
+        </div>
+        <img class="twoObj" src="https://img.empyrean.tw/D8701FB7-FA04-4816-90BF-42D67A02104D.jpg" alt="">
+    </div>
+    <div class="row">
+        <img class="img-responsive" src="https://img.empyrean.tw/CC856549-61F1-43F0-9169-381685A48A4C.png" alt="">
+    </div>
+    <div class="bannerBox">
+        <div class="bannerTitle">支援騎乘時的各項數據</div>
+        <div class="mainPoint">
+            <div class="descBox">
+                <div class="item">距離自動計圈</div>
+                <div class="item">GPS 速度和距離</div>
+            </div>
+            <div class="descBox">
+                <div class="item">騎乘速度</div>
+                <div class="item">即時平均騎速</div>
+            </div>
+            <div class="descBox">
+                <div class="item">APPS 功能新增與建立</div>
+            </div>
+        </div>
+    </div>
+    <div class="iconIntroBox">
+        <div class="group">
+            <img src="https://img.empyrean.tw/D5A4C28D-1C86-44D8-B838-0539B121C473.png" alt="">
+            <div class="contentBox">
+                <div class="engDesc">Cycling</div>
+                <div class="name">自行車</div>
+            </div>
+        </div>
+        <div class="group">
+            <img src="https://img.empyrean.tw/80DF014C-69F1-483C-8E8B-B99303AE028D.png" alt="">
+            <div class="contentBox">
+                <div class="engDesc">MountainBiking</div>
+                <div class="name">登山自行車</div>
+            </div>
+        </div>
+        <div class="group">
+            <img src="https://img.empyrean.tw/80026389-EB4A-4243-AEE8-7DD54D7454B8.png" alt="">
+            <div class="contentBox">
+                <div class="engDesc">Bike Indoor</div>
+                <div class="name">室內騎乘</div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script type="application/javascript" src="http://localhost:35729/livereload.js"></script>
+<script src="build/js/scripts.min.js"></script>
+
+<script>
+  const data = [
+    {
+      name: '經典黑', images: [
+        {url: 'https://img.empyrean.tw/ABB6A9C2-C9AA-4892-9317-97EA854D97FB.jpg'},
+        {url: 'https://img.empyrean.tw/A1F08F69-BDAD-4CE9-9170-4C1BF770FE3C.jpg'},
+      ]
+    },
+    {
+      name: '時尚白', images: [
+        {url: 'https://img.empyrean.tw/709230B5-F408-4524-BBDD-AC17CA6214CC.jpg'},
+        {url: 'https://img.empyrean.tw/EA26B26B-99E4-45D2-90F7-0D3B2D8B1F62.jpg'},
+      ]
+    },
+    {
+      name: '琥珀色', images: [
+        {url: 'https://img.empyrean.tw/1378FD74-498A-4D1A-B05F-E1EB332077C6.jpg'},
+        {url: 'https://img.empyrean.tw/F0D6051E-771B-47EF-9CAD-2E54B456597E.jpg'},
+      ]
+    },
+
+
+  ]
+  const colorName = document.querySelector('.galleryContentBox .name .color')
+  const tabBtns = document.querySelectorAll('.tabGroup .tab')
+
+
+  function renderGallery(arr) {
+    const paginationBox = document.querySelector('.galleryBox .pagination')
+    const galleryTopBox = document.querySelector('.carousel .image-container')
+    const galleryThumbsBox = document.querySelector('.carousel__thumbs .image-container')
+    while (paginationBox.firstChild) {
+      paginationBox.removeChild(paginationBox.firstChild);
+    }
+    while (galleryTopBox.firstChild) {
+      galleryTopBox.removeChild(galleryTopBox.firstChild);
+    }
+    while (galleryThumbsBox.firstChild) {
+      galleryThumbsBox.removeChild(galleryThumbsBox.firstChild);
+    }
+
+    const gallery = arr.map(item => `<img src="${item.url}" alt="">`).join('')
+    const circles = arr.map(item => `<div class="circle"></div>`).join('')
+    paginationBox.insertAdjacentHTML('afterbegin', circles)
+    galleryTopBox.insertAdjacentHTML('afterbegin', gallery)
+    galleryThumbsBox.insertAdjacentHTML('afterbegin', gallery)
+  }
+
+  renderGallery(data[0].images)
+
+  const carousel = document.querySelector('.carousel')
+  const imgContainer = document.querySelector('.carousel .image-container')
+  const leftBtn = document.getElementById('left')
+  const rightBtn = document.getElementById('right')
+  const images = document.querySelectorAll('.carousel .image-container img')
+  const thumbs = document.querySelectorAll('.carousel__thumbs .image-container img')
+  const circles = document.querySelectorAll('.pagination .circle')
+  // Carousel
+  const topCarousel = new Carousel(carousel, imgContainer, leftBtn, rightBtn, images, thumbs,circles, 5000)
+
+  // thumbs
+  const thumbsContainer = document.getElementById('thumbsContainer')
+  const prevBtn = document.querySelector('.btn-prev')
+  const nextBtn = document.querySelector('.btn-next')
+
+  const buttonNav = new Thumbs(carousel, thumbsContainer, prevBtn, nextBtn, thumbs)
+
+  tabBtns.forEach((item, i) => {
+    item.addEventListener('click', () => {
+      tabBtns.forEach(item => item.classList.remove('active'))
+      item.classList.add('active')
+      renderGallery(data[i].images)
+      const images = document.querySelectorAll('.carousel .image-container img')
+      const thumbs = document.querySelectorAll('.carousel__thumbs .image-container img')
+      const circles = document.querySelectorAll('.pagination .circle')
+      // Carousel
+      topCarousel.images = images
+      topCarousel.thumbs = thumbs
+      topCarousel.circles = circles
+      topCarousel.initialActiveCircle()
+      topCarousel.resetSize()
+      topCarousel.windowResize()
+      topCarousel.thumb()
+      topCarousel.index = 0
+      topCarousel.changeImage()
+      // thumbs
+      buttonNav.thumbs = thumbs
+      buttonNav.resetSize()
+      colorName.textContent = data[i].name
+    })
+  })
+
+
+</script>
+
+</body>
+</html>

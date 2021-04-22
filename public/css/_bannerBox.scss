@@ -1,17 +1,21 @@
 .bannerBox {
-  padding: 80px 40px;
+  padding: 50px 80px 80px;
   display: flex;
   flex-direction: column;
+  background: linear-gradient(180deg, rgba(221,219,220,1) 0%, rgba(255,255,255,1) 50%);
   .bannerTitle {
     &:before {
       position: absolute;
-      content: '\f04b';
-      font-family: 'Font Awesome 5 Free';
-      font-size: 14px;
-      left: -20px;
+      content: "\27A4";
+      width: 12px;
+      font-size: 28px;
+      left: -42px;
       top: 50%;
       transform: translateY(-50%);
       color: darkcyan;
+    }
+    @include breakpoint($iphone){
+      font-size: 1.25rem;
     }
     position: relative;
     font-size: 1.875rem;
@@ -28,15 +32,18 @@
       @include breakpoint($ipad){
         margin-right:0;
       }
-      margin-right: calc(48px * 3);
-      display: flex;
-      flex-direction: column;
+      margin-right: calc(12px * 3);
+      display: block;
+      flex: 1 1 33.33%;
       .item {
         @include breakpoint($ipad){
-          font-size: 1.1rem;
+          font-size: 1rem;
+          line-height: 1.2;
+          margin-bottom: 12px;
         }
-        font-size: 1.375rem;
-        flex: 0 1 33.33%;
+        font-size: 1.175rem;
+        margin-bottom: 5px;
+
       }
     }
   }

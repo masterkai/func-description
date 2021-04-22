@@ -1,0 +1,18 @@
+.container {
+  @include breakpoint($ipad){
+    padding: 20px;
+  }
+  max-width: 1140px;
+  margin: 0 auto;
+
+  .row {
+    @include breakpoint($ipad) {
+      flex-wrap: wrap;
+      flex-direction: column;
+
+    }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

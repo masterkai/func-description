@@ -3,21 +3,33 @@
     flex-direction: column;
   }
   margin-bottom: calc(24px * 3);
-  padding: 0 40px;
+  padding: 0 80px;
   display: flex;
   justify-content: flex-start;
   .group {
+    @include breakpoint($iphone){
+      margin-right: 0;
+    }
     margin-right: calc(24px * 3);
     display: flex;
     padding-bottom: 24px;
     align-items: center;
     img {
-      width:100px;
+      @include breakpoint($iphone){
+        width: 55px;
+      }
+      width:65px;
       margin-right: 24px;
     }
     .contentBox {
+      @include breakpoint($iphone){
+        width: 100%;
+      }
       .engDesc {
         font-weight: 700;
+      }
+      .name {
+
       }
     }
   }

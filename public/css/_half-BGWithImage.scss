@@ -1,0 +1,140 @@
+.half-BGWithImage {
+  //padding: 48px;
+  height: auto;
+  width: 100%;
+  &--left {
+    div {
+      .contentBox {
+        @include breakpoint($ipad){
+          flex: 0 1 65%;
+        }
+        flex: 0 1 55%;
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+        align-items: center;
+        justify-content: space-between;
+        img {
+          width: 100%;
+        }
+        .desc {
+          &--noMarginTop {
+            margin-top: 0;
+          }
+          @include breakpoint($iphone){
+            padding: 12px;
+          }
+          margin-top: 36px;
+          background: linear-gradient(300deg, rgba(225,177,118,1) 0%, rgba(244,176,151,1) 100%);
+          padding: 24px 36px;
+          flex: 0 1 30%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+          height: fit-content;
+          .title {
+            @include breakpoint($ipad){
+              font-size:1.65rem;
+              margin-top: 10px;
+            }
+            @include breakpoint($iphone){
+              font-size: 1.3rem;
+            }
+            height: auto;
+            color: #fff;
+            font-weight: 600;
+            font-size: 2rem;
+            text-shadow: 1px 1px 3px rgba(252, 84, 15, 0.59);
+            margin-top: 20px;
+          }
+          p {
+            @include breakpoint($ipad){
+              font-size:.9rem;
+              margin-top: 10px;
+              margin-bottom: 10px;
+            }
+            font-size: 1.25rem;
+            color: #fff;
+            margin-top: 20px;
+            margin-bottom: 20px;
+          }
+        }
+      }
+
+      display: flex;
+      justify-content: normal;
+      height: auto;
+      background-repeat: no-repeat;
+      background-position: left center;
+      background-size: 50%;
+
+    }
+  }
+  &--right {
+    div {
+      .contentBox {
+        @include breakpoint($ipad){
+          flex: 0 1 65%;
+        }
+        flex: 0 1 55%;
+        display: flex;
+        flex-direction: column;
+        margin-right: auto;
+        align-items: center;
+        justify-content: space-between;
+        img {
+          width: 100%;
+        }
+        .desc {
+          &--noMarginTop {
+            margin-top: 0;
+          }
+          @include breakpoint($ipad){
+            padding: 12px;
+          }
+          margin-top: 36px;
+          background: linear-gradient(300deg, rgba(225,177,118,1) 0%, rgba(244,176,151,1) 100%);
+          padding: 24px 36px;
+          flex: 0 1 30%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+          height: fit-content;
+          .title {
+            @include breakpoint($ipad){
+              font-size:1.65rem;
+              margin-top: 10px;
+            }
+            @include breakpoint($iphone){
+              font-size: 1.3rem;
+            }
+            height: auto;
+            color: #fff;
+            font-weight: 600;
+            font-size: 2rem;
+            text-shadow: 1px 1px 3px rgba(252, 84, 15, 0.59);
+            margin-top: 20px;
+          }
+          p {
+            @include breakpoint($ipad){
+              font-size:.9rem;
+              margin-top: 10px;
+              margin-bottom: 10px;
+            }
+            font-size: 1.25rem;
+            color: #fff;
+            margin-top: 20px;
+            margin-bottom: 20px;
+          }
+        }
+      }
+
+      display: flex;
+      justify-content: normal;
+      height: auto;
+      background-repeat: no-repeat;
+      background-position: right center;
+      background-size: 50%;
+    }
+  }
+}
